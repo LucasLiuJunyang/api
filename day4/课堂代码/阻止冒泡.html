@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 150px;
+            height: 150px;
+            background-color: #f00;
+        }
+
+        .father .son {
+            width: 100px;
+            height: 100px;
+            background-color: #fff520;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        var father = document.querySelector(".father");
+        var son = document.querySelector(".son");
+        father.addEventListener("click", function (e) {
+            alert("1");
+            e.stopPropagation()
+        });
+
+        son.addEventListener("click", function (e) {
+            alert("2");
+            e.stopPropagation()
+        });
+
+
+    </script>
+</body>
+
+</html>
